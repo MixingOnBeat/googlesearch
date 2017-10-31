@@ -1,0 +1,31 @@
+<!-- IF S_GOOGLESEARCH_POSITION3 and not S_FORUM_ID and not S_IN_SEARCH -->
+<!--[if !IE]><!-->
+      <div id="google" class="google-inner">
+
+         <!-- IF S_DISPLAY_SEARCH -->
+
+            <div id="g5-search-box" class="search-box rightside responsive-hide">
+               <form action="{U_SEARCH}" method="get" id="search">
+                  <fieldset>
+                     <input name="keywords" id="keywords" type="search" maxlength="128" title="{L_SEARCH_KEYWORDS}" class="inputbox search tiny" size="20" value="{SEARCH_WORDS}" placeholder="{L_SEARCH_MINI}" >
+                     <button id="button" class="button icon-button search-icon" type="submit" title="{L_SEARCH}">{L_SEARCH}</button>
+                     <a href="{U_SEARCH}" class="button icon-button search-adv-icon" title="{L_SEARCH_ADV}">{L_SEARCH_ADV}</a>
+                  </fieldset>
+               </form>
+            </div>
+
+         <!-- ENDIF -->
+
+      <div id="g4-search-box"  class="search-box rightside responsive-hide">
+         <form action="{U_GOOGLE_SEARCH}">
+            <fieldset>
+               <input name="cx" type="hidden" value="{S_GOOGLESEARCH_CUSTOM_CODE}">
+               <input action="text" name="q" type="search" maxlength="255" class="inputbox search tiny" size="20" value="{SEARCH_WORDS}" placeholder="{L_GOOGLE_SEARCH}">
+               <button id="g4-button" class="button icon-button search-icon" type="submit" name="sitesearch" title="{L_SEARCH_GOOGLE}" />
+            </fieldset>
+         </form>
+      </div>
+
+   </div>
+<!--<![endif]-->
+<!-- ENDIF -->

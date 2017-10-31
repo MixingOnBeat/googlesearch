@@ -17,7 +17,7 @@ if (empty($lang) || !is_array($lang))
 }
 
 $lang = array_merge($lang, array(
-   'ACP_GOOGLESEARCH'         => 'Google Search',
-   'GOOGLESEARCH_CONFIG'      => 'Google Search Settings',
+	'ACP_GOOGLESEARCH'			=> 'Google Search',
+	'GOOGLESEARCH_CONFIG'		=> 'Google Search Settings',
 ));
 

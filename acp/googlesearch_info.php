@@ -10,15 +10,15 @@
 namespace hifikabin\googlesearch\acp;
 
 class googlesearch_info
- {
-    function module()
-    {
-         return array(
-         'filename'  => '\hifikabin\googlesearch\acp\googlesearch_module',
-         'title'     => 'ACP_GOOGLESEARCH',
-         'modes'     => array(
-         'config' => array('title' => 'ACP_GOOGLESEARCH_CONFIG', 'auth' => 'ext_hifikabin/googlesearch && acl_a_board', 'cat' => array('ACP_GOOGLESEARCH')),
-         ),
-      );
-   }
+{
+	function module()
+	{
+		return array(
+		'filename'	=> '\hifikabin\googlesearch\acp\googlesearch_module',
+		'title'	=> 'ACP_GOOGLESEARCH',
+		'modes'	=> array(
+		'config'	=> array('title' => 'ACP_GOOGLESEARCH_CONFIG', 'auth' => 'ext_hifikabin/googlesearch && acl_a_board', 'cat' => array('ACP_GOOGLESEARCH')),
+			),
+		);
+	}
 }

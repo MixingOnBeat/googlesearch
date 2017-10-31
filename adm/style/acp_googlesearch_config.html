@@ -1,70 +1,70 @@
-<!-- INCLUDE overall_header.html -->
-   <h1>{L_ACP_GOOGLESEARCH_CONFIG} {GOOGLESEARCH_VERSION}</h1>
+{% INCLUDE 'overall_header.html' %}
+	<h1>{{ lang('ACP_GOOGLESEARCH_CONFIG') }}</h1>
 
-   <p>{L_ACP_GOOGLESEARCH_CONFIG_EXPLAIN}</p>
+	<p>{{ lang('ACP_GOOGLESEARCH_CONFIG_EXPLAIN') }}</p>
 
-   <form id="acp_quotes_config" method="post" action="{U_ACTION}">
+	<form id="acp_quotes_config" method="post" action="{{ U_ACTION }}">
 
-   <fieldset>
-   <legend>{L_ACP_GOOGLESEARCH_CONFIG_SET}</legend>
-   <dl>
-      <dt>
-         <label for="googlesearch_custom">{L_GOOGLESEARCH_CUSTOM}{L_COLON}</label><br /><span>{L_GOOGLESEARCH_CUSTOM_CODE_EXPLAIN}</span>
-      </dt>
-         <dd>
-            <input name="googlesearch_custom_code" type="text" id="googlesearch_custom_code" value="{GOOGLESEARCH_CUSTOM_CODE}"  placeholder="{L_GOOGLESEARCH_CUSTOM_CODE_PLACEHOLDER}"length="100" maxlength="255" />
-         </dd>
-   </dl>
-   <dl>
-      <dt>
-         <label for="googlesearch_position">{L_GOOGLESEARCH_POSITION}{L_COLON}</label>
-      </dt>
-   </dl>
-   <dl>
-      <dt>
-         <label for="googlesearch_custom">{L_GOOGLESEARCH_HEADER}</label>
-      </dt>
-         <dd>
-            <label><input type="radio" class="radio" name="googlesearch_position2" value="1"<!-- IF GOOGLESEARCH_POSITION2 --> id="googlesearch_position" checked="checked"<!-- ENDIF --> /> {L_YES}</label>
-         <label><input type="radio" class="radio" name="googlesearch_position2" value="0"<!-- IF not GOOGLESEARCH_POSITION2 --> id="googlesearch_position" checked="checked"<!-- ENDIF --> /> {L_NO}</label>
-         </dd>
-   </dl>
-   <dl>
-      <dt>
-         <label for="googlesearch_custom">{L_GOOGLESEARCH_NAVBAR}</label>
-      </dt>
-         <dd>
-         <label><input type="radio" class="radio" name="googlesearch_position" value="1"<!-- IF GOOGLESEARCH_POSITION --> id="googlesearch_position" checked="checked"<!-- ENDIF --> /> {L_YES}</label>
-         <label><input type="radio" class="radio" name="googlesearch_position" value="0"<!-- IF not GOOGLESEARCH_POSITION --> id="googlesearch_position" checked="checked"<!-- ENDIF --> /> {L_NO}</label>
-         </dd>
-   </dl>
+	<fieldset>
+	<legend>{{ lang('ACP_GOOGLESEARCH_CONFIG_SET') }}</legend>
+	<dl>
+		<dt>
+			<label for="googlesearch_custom">{{ lang('GOOGLESEARCH_CUSTOM') }}{{ lang('COLON') }}</label><br /><span>{{ lang('GOOGLESEARCH_CUSTOM_CODE_EXPLAIN') }}</span>
+		</dt>
+		<dd>
+			<input style="width: 90%" name="googlesearch_custom_code" type="text" id="googlesearch_custom_code" value="{{ GOOGLESEARCH_CUSTOM_CODE }}"  placeholder="{{ lang('GOOGLESEARCH_CUSTOM_CODE_PLACEHOLDER') }}" maxlength="255" />
+		</dd>
+	</dl>
+	<dl>
+		<dt>
+			<label for="googlesearch_position">{{ lang('GOOGLESEARCH_POSITION') }}{{ lang('COLON') }}</label>
+		</dt>
+	</dl>
+	<dl>
+		<dt>
+			<label for="googlesearch_custom">{{ lang('GOOGLESEARCH_HEADER') }}</label>
+		</dt>
+		<dd>
+			<label><input type="radio" class="radio" name="googlesearch_position2" value="1"{% if GOOGLESEARCH_POSITION2 %} id="googlesearch_position" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+			<label><input type="radio" class="radio" name="googlesearch_position2" value="0"{% if not GOOGLESEARCH_POSITION2 %} id="googlesearch_position" checked="checked"{% endif %} /> {{ lang('NO') }}</label>
+		</dd>
+	</dl>
+	<dl>
+		<dt>
+			<label for="googlesearch_custom">{{ lang('GOOGLESEARCH_NAVBAR') }}</label>
+		</dt>
+		<dd>
+			<label><input type="radio" class="radio" name="googlesearch_position" value="1"{% if GOOGLESEARCH_POSITION %} id="googlesearch_position" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+			<label><input type="radio" class="radio" name="googlesearch_position" value="0"{% if not GOOGLESEARCH_POSITION %} id="googlesearch_position" checked="checked"{% endif %} /> {{ lang('NO') }}</label>
+		</dd>
+	</dl>
 
-   <dl>
-      <dt>
-         <label for="googlesearch_custom">{L_GOOGLESEARCH_INDEX}</label>
-      </dt>
-         <dd>
-         <label><input type="radio" class="radio" name="googlesearch_position3" value="1"<!-- IF GOOGLESEARCH_POSITION3 --> id="googlesearch_position" checked="checked"<!-- ENDIF --> /> {L_YES}</label>
-         <label><input type="radio" class="radio" name="googlesearch_position3" value="0"<!-- IF not GOOGLESEARCH_POSITION3 --> id="googlesearch_position" checked="checked"<!-- ENDIF --> /> {L_NO}</label>
-         </dd>
-   </dl>
-      </br></br>
-   <dl>
-      <dt>
-         <label for="googlesearch_verification">{L_GOOGLESEARCH_VERIFICATION_CODE}{L_COLON}</label><br /><span>{L_GOOGLESEARCH_VERIFICATION_CODE_EXPLAIN}</span>
-      </dt>
-         <dd>
-            <input name="googlesearch_verification_code" type="text" id="googlesearch_verification_code" value="{GOOGLESEARCH_VERIFICATION_CODE}"  placeholder="{L_GOOGLESEARCH_VERIFICATION_CODE_PLACEHOLDER}"length="100" maxlength="255" />
-         </dd>
-   </dl>
+	<dl>
+		<dt>
+			<label for="googlesearch_custom">{{ lang('GOOGLESEARCH_INDEX') }}</label>
+		</dt>
+		<dd>
+			<label><input type="radio" class="radio" name="googlesearch_position3" value="1"{% if GOOGLESEARCH_POSITION3 %} id="googlesearch_position" checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+			<label><input type="radio" class="radio" name="googlesearch_position3" value="0"{% if not GOOGLESEARCH_POSITION3 %} id="googlesearch_position" checked="checked"{% endif %} /> {{ lang('NO') }}</label>
+		</dd>
+	</dl>
+		<br style="margin-bottom:8px;"/>
+	<dl>
+		<dt>
+			<label for="googlesearch_verification">{{ lang('GOOGLESEARCH_VERIFICATION_CODE') }}{{ lang('COLON') }}</label><br /><span>{{ lang('GOOGLESEARCH_VERIFICATION_CODE_EXPLAIN') }}</span>
+		</dt>
+		<dd>
+			<input style="width: 90%" name="googlesearch_verification_code" type="text" id="googlesearch_verification_code" value="{{ GOOGLESEARCH_VERIFICATION_CODE }}"  placeholder="{{ lang('GOOGLESEARCH_VERIFICATION_CODE_PLACEHOLDER') }}" maxlength="255" />
+		</dd>
+	</dl>
 
-   <p class="submit-buttons">
-      <input type="hidden" name="action" value="save" />
-      <input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
-      <input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
-      {S_FORM_TOKEN}
-   </p>
-   </fieldset>
-   </form>
+	<p class="submit-buttons">
+	<input type="hidden" name="action" value="save" />
+		<input class="button1" type="submit" id="submit" name="submit" value="{{ lang('SUBMIT') }}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{{ lang('RESET') }}" />
+		{{ S_FORM_TOKEN }}
+	</p>
+	</fieldset>
+	</form>
 
-<!-- INCLUDE overall_footer.html -->
+{% INCLUDE 'overall_footer.html' %}
